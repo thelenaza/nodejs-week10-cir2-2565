@@ -20,6 +20,7 @@ const server = http.createServer((req,res) => {
     }
 })
 
-server.listen(5000,()=>{
-    console.log(`Server start at http://localhost:5000`)
+const PORT = process.env.PORT || 5000;
+server.listen(PORT,()=>{
+    console.log(`Server start at http://localhost:${PORT}`)
 })
